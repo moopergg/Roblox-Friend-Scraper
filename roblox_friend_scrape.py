@@ -14,7 +14,7 @@ def get_friends(user_id):
     return friends
 
 def save_to_file(friends, filename="roblox_friends.txt"):
-    with open(filename, "w", encoding="utf-8") as file:
+    with open(filename, "a", encoding="utf-8") as file:  # Open in append mode
         for friend in friends:
             file.write(friend + "\n")
     print(f"Saved {len(friends)} friends to {filename}")
